@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadma - Professional Makeup Artist | Transform Your Beauty</title>
+    <meta name="description" content="Discover the transformative power of professional makeup artistry with Shadma. Elevate your natural beauty and boost your confidence with personalized beauty services.">
+    <meta name="keywords" content="makeup artist, professional makeup, bridal makeup, beauty transformation, confidence boost">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Custom Tailwind Configuration */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #C0392B 0%, #E74C3C 100%);
+            --secondary-gradient: linear-gradient(135deg, #FF1493 0%, #FF6B6B 100%);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+
+        .glassmorphism {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+        }
+
+        .gradient-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .floating-animation {
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        video {
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text font-['Playfair_Display']">SHADMA</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-red-300 transition-colors duration-300">Home</a>
+                    <a href="#about" class="hover:text-red-300 transition-colors duration-300">About</a>
+                    <a href="#services" class="hover:text-red-300 transition-colors duration-300">Services</a>
+                    <a href="#gallery" class="hover:text-red-300 transition-colors duration-300">Gallery</a>
+                    <a href="#videos" class="hover:text-red-300 transition-colors duration-300">Videos</a>
+                    <a href="#testimonials" class="hover:text-red-300 transition-colors duration-300">Testimonials</a>
+                    <a href="#contact" class="hover:text-red-300 transition-colors duration-300">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800/95 backdrop-blur-md">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="#home" class="block hover:text-red-300 transition-colors duration-300">Home</a>
+                <a href="#about" class="block hover:text-red-300 transition-colors duration-300">About</a>
+                <a href="#services" class="block hover:text-red-300 transition-colors duration-300">Services</a>
+                <a href="#gallery" class="block hover:text-red-300 transition-colors duration-300">Gallery</a>
+                <a href="#videos" class="block hover:text-red-300 transition-colors duration-300">Videos</a>
+                <a href="#testimonials" class="block hover:text-red-300 transition-colors duration-300">Testimonials</a>
+                <a href="#contact" class="block hover:text-red-300 transition-colors duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen p-6 pt-36 flex items-center relative  " >
+        <!-- Background Pattern -->
+                   <!-- VIDEO BACKGROUND -->
+<!-- VIDEO BACKGROUND -->
+<video
+  class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+  autoplay
+  muted
+  loop
+  playsinline
+>
+  <source src="bg-video.mp4" type="video/mp4" />
+</video>
+
+<!-- DARK OVERLAY -->
+<div class="absolute inset-0 bg-black/10 z-10"></div>
+
+ 
+
+
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-20 w-32 h-32 border-2 border-red-300 rounded-full"></div>
+            <div class="absolute top-40 right-32 w-24 h-24 border-2 border-pink-300 rounded-full"></div>
+            <div class="absolute bottom-32 left-1/4 w-40 h-40 border-2 border-red-300 rounded-full"></div>
+            <div class="absolute bottom-20 right-20 w-28 h-28 border-2 border-pink-300 rounded-full"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10" >
+
+
+            <div class="flex justify-center items-end text-center mt-20">
+                <!-- Left Content -->
+                <div data-aos="fade-right pt-22">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-50 font-['Playfair_Display'] py-22">
+                       Indore's Premier
+                       
+                        <span class="block text-red-300 md:text-7xl">Makeup Artist Shadma</span>
+                       
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 text-gray-50 max-w-2xl">
+                        Transform your beauty with expert makeup artist .
+                    </p>
+
+                    <!-- Service Search -->
+                    <div class="glassmorphism px-6 py-2 max-w-md mx-auto rounded-2xl mb-8 bg-white/20 backdrop-blur-sm border border-white/20">
+                       
+                       
+                    
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row justify-around items-center gap-4">
+                            <a href="#contact" class="bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg text-center">
+                                Book Consultation
+                            </a>
+                            <a href="#services" class="bg-white hover:bg-gray-50 text-gray-800 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg border border-gray-300 text-center">
+                                View Services
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+             
+            </div>
+
+            <!-- Help Section -->
+            <div class="mt-16 glassmorphism p-8 rounded-2xl bg-white/90 backdrop-blur-sm border border-white/20" data-aos="fade-up">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Need Help Finding the Perfect Look?</h3>
+                    <p class="text-gray-600">Our beauty consultants will help you find the ideal makeup artist for your needs</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                        <input type="tel" placeholder="Enter your full name"
+                               class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                     <input type="tel" placeholder="Enter your mobile number"
+                               class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                    </div>
+                    <div class="flex items-end">
+                        <button class="w-full bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            Get Expert Help
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-3xl text-gray-400"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-transparent to-slate-800/50">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 font-['Playfair_Display']">
+                        Meet Your Beauty
+                        <span class="gradient-text">Transformation Artist</span>
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                        With over 8 years of experience in the beauty industry, I specialize in creating looks that enhance your natural features while expressing your unique personality. My passion lies in helping you discover the confidence that comes from feeling truly beautiful.
+                    </p>
+                    <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                        Every face tells a story, and I believe in the power of makeup to amplify your narrative. Whether it's a special occasion, everyday elegance, or bridal transformation, I approach each client with genuine care and artistic vision.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="glassmorphism px-6 py-3 rounded-full">
+                            <span class="text-red-300 font-semibold">8+ Years Experience</span>
+                        </div>
+                        <div class="glassmorphism px-6 py-3 rounded-full">
+                            <span class="text-red-300 font-semibold">500+ Happy Clients</span>
+                        </div>
+                        <div class="glassmorphism px-6 py-3 rounded-full">
+                            <span class="text-red-300 font-semibold">Certified Professional</span>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="relative">
+                    <div class="relative">
+                        <img src="https://i.pinimg.com/736x/49/0c/07/490c079aba2997105cab7783f9cb1ed9.jpg"
+                             alt="Professional Makeup Artist at work"
+                             class="w-full h-96 object-cover rounded-2xl shadow-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
+                    </div>
+                    <!-- Floating elements -->
+                    <div class="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg">
+                        <i class="fas fa-sparkles text-white text-2xl"></i>
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
+                        <i class="fas fa-heart text-white text-xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-['Playfair_Display']">
+                    Beauty Services That
+                    <span class="gradient-text">Celebrate You</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    From everyday elegance to unforgettable moments, discover makeup services designed to enhance your natural beauty
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glassmorphism p-8 rounded-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-ring text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 font-['Playfair_Display']">Bridal Makeup</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Your special day deserves perfection. Comprehensive bridal packages including trial sessions, hair styling, and post-wedding touch-ups.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold gradient-text">₹15,000</span>
+                        <span class="text-red-300 text-sm">Starting from</span>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glassmorphism p-8 rounded-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-camera text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 font-['Playfair_Display']">Editorial & Photography</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Professional makeup for photoshoots, editorials, and content creation. Camera-ready perfection with long-lasting formulations.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold gradient-text">₹8,000</span>
+                        <span class="text-red-300 text-sm">Per session</span>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glassmorphism p-8 rounded-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-star text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 font-['Playfair_Display']">Special Occasions</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Perfect makeup for parties, events, corporate functions, and celebrations. Stand out with confidence and elegance.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold gradient-text">₹6,000</span>
+                        <span class="text-red-300 text-sm">Per event</span>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glassmorphism p-8 rounded-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 font-['Playfair_Display']">Graduation & Milestones</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Celebrate life's important moments with makeup that makes you feel as accomplished as you are successful.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold gradient-text">₹5,000</span>
+                        <span class="text-red-300 text-sm">Per session</span>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glassmorphism p-8 rounded-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-home text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 font-['Playfair_Display']">In-Home Services</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Convenient beauty services at your doorstep. Perfect for busy schedules and ultimate comfort.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold gradient-text">₹7,000</span>
+                        <span class="text-red-300 text-sm">Plus travel</span>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glassmorphism p-8 rounded-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 font-['Playfair_Display']">Consultation & Lessons</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Learn makeup techniques and discover products that work best for your skin tone and features.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold gradient-text">₹3,000</span>
+                        <span class="text-red-300 text-sm">Per session</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gradient-to-b from-slate-800/50 to-transparent">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-['Playfair_Display']">
+                    Beauty Transformations
+                    <span class="gradient-text">Gallery</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Witness the magic of transformation through the art of makeup. Each look tells a unique story of confidence and beauty.
+                </p>
+            </div>
+
+           <div class="container mx-auto px-5 py-2 lg:px-12 lg:pt-14">
+  <div class="-m-1 flex flex-wrap md:-m-2">
+    <div class="flex w-1/2 flex-wrap">
+      <div class="w-1/2 p-1 md:p-2">
+        <img
+          alt="gallery"
+          class="block h-full w-full rounded-lg object-cover object-center"
+          src="https://img.freepik.com/free-photo/brunette-model-girl-with-trendy-makeup-smooth-skin_114579-9293.jpg" />
+      </div>
+      <div class="w-1/2 p-1 md:p-2">
+        <img
+          alt="gallery"
+          class="block h-full w-full rounded-lg object-cover object-center"
+          src="https://i.pinimg.com/736x/74/ed/f0/74edf0375c793a17801a2a654a0680fd.jpg" />
+      </div>
+      <div class="w-full p-1 md:p-2">
+        <img
+          alt="gallery"
+          class="block h-full w-full rounded-lg object-cover object-center"
+          src="https://i.pinimg.com/1200x/9c/ba/59/9cba5929fe5f4e27f02ae8d6a176a445.jpg" />
+      </div>
+    </div>
+    <div class="flex w-1/2 flex-wrap">
+      <div class="w-full p-1 md:p-2">
+        <img
+          alt="gallery"
+          class="block h-full w-full rounded-lg object-cover object-center"
+          src="https://i.pinimg.com/1200x/b2/d1/e9/b2d1e9b441f3088050db6fe45e48c9a3.jpg" />
+      </div>
+      <div class="w-1/2 p-1 md:p-2">
+        <img
+          alt="gallery"
+          class="block h-full w-full rounded-lg object-cover object-center"
+          src="https://i.pinimg.com/1200x/7d/dd/ee/7dddeece38b7a38f055df7c812cd40ff.jpg" />
+      </div>
+      <div class="w-1/2 p-1 md:p-2">
+        <img
+          alt="gallery"
+          class="block h-full w-full rounded-lg object-cover object-center"
+          src="https://i.pinimg.com/1200x/63/01/4b/63014bd6a0f18c14bfcc1e1c3b67451a.jpg" />
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-['Playfair_Display']">
+                    Beauty Stories in
+                    <span class="gradient-text">Motion</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Experience the transformation journey through quick, captivating beauty tutorials and behind-the-scenes moments
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video 1 -->
+                <div class="glassmorphism p-6 rounded-2xl hover:bg-white/20 transition-all duration-300" data-aos="fade-up">
+                    <div class="aspect-[9/16] mb-4 rounded-xl overflow-hidden">
+                        <iframe
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            title="Beauty Tutorial"
+                            class="w-full h-full"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Quick Bridal Glow</h3>
+                    <p class="text-gray-300 text-sm">5-minute bridal makeup routine for that perfect glow</p>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="glassmorphism p-6 rounded-2xl hover:bg-white/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="aspect-[9/16] mb-4 rounded-xl overflow-hidden">
+                        <iframe
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            title="Makeup Transformation"
+                            class="w-full h-full"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Natural to Glam</h3>
+                    <p class="text-gray-300 text-sm">Transform your everyday look into something extraordinary</p>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="glassmorphism p-6 rounded-2xl hover:bg-white/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="aspect-[9/16] mb-4 rounded-xl overflow-hidden">
+                        <iframe
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            title="Beauty Tips"
+                            class="w-full h-full"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Skincare Secrets</h3>
+                    <p class="text-gray-300 text-sm">Essential skincare routine for makeup longevity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gradient-to-b from-transparent to-slate-800/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-['Playfair_Display']">
+                    Stories of
+                    <span class="gradient-text">Transformation</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Real stories from real clients who discovered their confidence through the power of beautiful makeup
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="glassmorphism p-8 rounded-2xl hover:bg-white/20 transition-all duration-300" data-aos="fade-up">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                             alt="Client testimonial"
+                             class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Priya Sharma</h4>
+                            <p class="text-red-300 text-sm">Bridal Client</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "Shadma made my wedding day absolutely perfect. Her attention to detail and understanding of my vision created a look that was both timeless and stunning. I felt like a princess!"
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glassmorphism p-8 rounded-2xl hover:bg-white/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                             alt="Client testimonial"
+                             class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Anjali Verma</h4>
+                            <p class="text-red-300 text-sm">Corporate Events</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "Working with Shadma for corporate events has been incredible. She understands the balance between professional and polished. My confidence soared after her work!"
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="glassmorphism p-8 rounded-2xl hover:bg-white/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                             alt="Client testimonial"
+                             class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Kavita Patel</h4>
+                            <p class="text-red-300 text-sm">Photography</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "For my portfolio shoot, Shadma created looks that perfectly captured my personality. Her creativity and professionalism made the entire experience enjoyable and successful."
+                    </p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="glassmorphism p-8 rounded-2xl hover:bg-white/20 transition-all duration-300" data-aos="fade-up">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                             alt="Client testimonial"
+                             class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Meera Joshi</h4>
+                            <p class="text-red-300 text-sm">Special Occasions</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "Shadma's work for my anniversary celebration was magical. She made me feel beautiful and confident, and the compliments I received were endless!"
+                    </p>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="glassmorphism p-8 rounded-2xl hover:bg-white/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                             alt="Client testimonial"
+                             class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Rashmi Agarwal</h4>
+                            <p class="text-red-300 text-sm">Consultation</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "The consultation session was incredibly helpful. Shadma taught me so much about my skin type and how to enhance my natural features. Highly recommend!"
+                    </p>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="glassmorphism p-8 rounded-2xl hover:bg-white/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                             alt="Client testimonial"
+                             class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Sneha Reddy</h4>
+                            <p class="text-red-300 text-sm">Graduation</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "For my graduation ceremony, Shadma created a look that made me feel accomplished and beautiful. It was the perfect way to celebrate this milestone!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-['Playfair_Display']">
+                    Let's Create Your
+                    <span class="gradient-text">Beauty Story</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Ready to transform your beauty? Let's discuss your vision and create something magical together.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div data-aos="fade-right">
+                    <div class="glassmorphism p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold mb-6 font-['Playfair_Display']">Send Me a Message</h3>
+                        <form id="contact-form" action="backend.php" method="POST">
+                            <div class="mb-6">
+                                <label for="name" class="block text-sm font-medium mb-2">Your Name *</label>
+                                <input type="text" id="name" name="name" required
+                                       class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400">
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="email" class="block text-sm font-medium mb-2">Email Address *</label>
+                                <input type="email" id="email" name="email" required
+                                       class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400">
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="phone" class="block text-sm font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone"
+                                       class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400">
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="service" class="block text-sm font-medium mb-2">Service Interested In</label>
+                                <select id="service" name="service"
+                                        class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent text-white">
+                                    <option value="">Select a service</option>
+                                    <option value="bridal">Bridal Makeup</option>
+                                    <option value="editorial">Editorial & Photography</option>
+                                    <option value="occasions">Special Occasions</option>
+                                    <option value="graduation">Graduation & Milestones</option>
+                                    <option value="home">In-Home Services</option>
+                                    <option value="consultation">Consultation & Lessons</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
+                                <textarea id="message" name="message" rows="4"
+                                          class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400 resize-none"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                    class="w-full bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white py-4 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                Send Message
+                            </button>
+                        </form>
+
+                        <!-- Form Status Messages -->
+                        <div id="form-status" class="mt-6 hidden">
+                            <div id="success-message" class="hidden bg-green-500/20 border border-green-500/30 text-green-300 p-4 rounded-lg">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                Thank you! Your message has been sent successfully. I'll get back to you soon.
+                            </div>
+                            <div id="error-message" class="hidden bg-red-500/20 border border-red-500/30 text-red-300 p-4 rounded-lg">
+                                <i class="fas fa-exclamation-circle mr-2"></i>
+                                Oops! Something went wrong. Please try again or contact me directly.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Info & Social -->
+                <div data-aos="fade-left">
+                    <div class="space-y-8">
+                        <!-- Contact Info -->
+                        <div class="glassmorphism p-8 rounded-2xl">
+                            <h3 class="text-2xl font-bold mb-6 font-['Playfair_Display']">Get In Touch</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-phone text-red-400 mr-4 text-xl"></i>
+                                    <div>
+                                        <p class="font-semibold">Phone</p>
+                                        <p class="text-gray-300">+91 98765 43210</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-envelope text-red-400 mr-4 text-xl"></i>
+                                    <div>
+                                        <p class="font-semibold">Email</p>
+                                        <p class="text-gray-300">hello@shadma-makeup.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-map-marker-alt text-red-400 mr-4 text-xl"></i>
+                                    <div>
+                                        <p class="font-semibold">Location</p>
+                                        <p class="text-gray-300">Mumbai, Maharashtra</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="glassmorphism p-8 rounded-2xl">
+                            <h3 class="text-2xl font-bold mb-6 font-['Playfair_Display']">Follow My Journey</h3>
+                            <p class="text-gray-300 mb-6">Stay connected for beauty tips, behind-the-scenes content, and exclusive offers.</p>
+                            <div class="flex space-x-4">
+                                <a href="https://wa.me/919876543210?text=Hi%20Shadma,%20I'm%20interested%20in%20your%20makeup%20services"
+                                   target="_blank"
+                                   class="w-12 h-12 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center transition-colors duration-300">
+                                    <i class="fab fa-whatsapp text-white text-xl"></i>
+                                </a>
+                                <a href="https://instagram.com/shadma_makeup" target="_blank"
+                                   class="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 rounded-full flex items-center justify-center transition-colors duration-300">
+                                    <i class="fab fa-instagram text-white text-xl"></i>
+                                </a>
+                                <a href="https://youtube.com/@shadma_makeup" target="_blank"
+                                   class="w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center transition-colors duration-300">
+                                    <i class="fab fa-youtube text-white text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Quick Stats -->
+                        <div class="glassmorphism p-8 rounded-2xl">
+                            <h3 class="text-2xl font-bold mb-6 font-['Playfair_Display']">Why Choose Me?</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold gradient-text mb-2">500+</div>
+                                    <div class="text-gray-300 text-sm">Happy Clients</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold gradient-text mb-2">8+</div>
+                                    <div class="text-gray-300 text-sm">Years Experience</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold gradient-text mb-2">100%</div>
+                                    <div class="text-gray-300 text-sm">Satisfaction</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold gradient-text mb-2">24/7</div>
+                                    <div class="text-gray-300 text-sm">Support</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900/80 backdrop-blur-md py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="text-3xl font-bold gradient-text font-['Playfair_Display'] mb-4">SHADMA</div>
+                <p class="text-gray-300 mb-6 max-w-md mx-auto">
+                    Transforming beauty, one face at a time. Professional makeup artist specializing in emotional, confidence-boosting transformations.
+                </p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://wa.me/919876543210?text=Hi%20Shadma,%20I'm%20interested%20in%20your%20makeup%20services"
+                       target="_blank"
+                       class="text-gray-400 hover:text-green-400 transition-colors duration-300">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                    <a href="https://instagram.com/shadma_makeup" target="_blank"
+                       class="text-gray-400 hover:text-pink-400 transition-colors duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://youtube.com/@shadma_makeup" target="_blank"
+                       class="text-gray-400 hover:text-red-400 transition-colors duration-300">
+                        <i class="fab fa-youtube text-2xl"></i>
+                    </a>
+                </div>
+                <div class="border-t border-gray-700 pt-8">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 Shadma Makeup Artist. All rights reserved.
+                        <span class="block mt-2">Made with ❤️ for beauty enthusiasts</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-red-600 to-pink-600 rounded-full shadow-lg opacity-0 transform translate-y-4 transition-all duration-300 hover:scale-110">
+        <i class="fas fa-arrow-up text-white"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
